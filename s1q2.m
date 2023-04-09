@@ -1,0 +1,15 @@
+clc;
+clear all;
+close all;
+warning off;
+n=0:1:100;
+s=2*n.*((0.9).^n);
+d=-0.5+rand(1,length(n));
+x=s+d;
+t=ones(1,5);
+num=(1/5)*t;
+den=[1];
+y=filter(num,den,x);
+stem(x,'filled');
+hold on;
+plot(y,'r','linewidth',2);
