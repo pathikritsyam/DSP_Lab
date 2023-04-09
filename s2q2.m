@@ -22,7 +22,7 @@ for i=0:2
     subplot(3,3,c);
     c=c+1;
     plot(n,angle(H));
-    ylabel("Magnitude");
+    ylabel("Phase");
     clear N h H;
     if(i==0)
         n=n2;
