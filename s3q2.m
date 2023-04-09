@@ -8,6 +8,7 @@ f=fs/2;
 M=[21 41];
 Wn=Wn/f;
 WIN='Rectangular';
+%hamming,hanning,blackman
 figure;
 for n=1:2
     window=rectwin(M(n));%hamming(n),hanning(n),blackman(n)
@@ -17,11 +18,11 @@ for n=1:2
     plot(w/pi,abs(H));
     ylabel('Magnitude');
     xlabel('Frequency');
-    title(['Magnitude response of ',WIN,' Window of order= ',n]);
+    title(['Magnitude response of ',WIN,' Window of order = ',string(M(n))]);
     subplot(2,2,2*n);
     plot(w/pi,angle(H));
     ylabel('Phase');
     xlabel('Frequency');
-    title(['Phase response of ',WIN,' Window of order= ',n]);
+    title(['Phase response of ',WIN,' Window of order = ',string(M(n))]);
     clear h H w;
 end
