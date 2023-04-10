@@ -14,7 +14,11 @@ for i=1:50
     s=rms(x)^2;
     snrq(i)=10*log10(s/n);
 end
-figure(1);
-plot(x);
-figure(2);
+subplot(1,2,1);
+plot(x); 
+title('Original speech signal');xlabel('Time');ylabel('Audio Signal');
+subplot(1,2,2);
 plot(b,snrq,'LineWidth',2);
+title('SQNR versus bits per sample.'); 
+xlabel('Bits per sample.'); 
+ylabel('SQNR(dB).');

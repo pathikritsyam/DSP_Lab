@@ -10,7 +10,12 @@ y(1)=1;
 for i=2:51
     y(i)=0.5*(y(i-1)+x(i)./y(i-1));
 end
-figure(1);
+figure;
+subplot(1,2,1);
 stem(n,x(2:52),'linewidth',2);
-figure(2);
+ylabel('x[n]');
+xlabel('n');
+subplot(1,2,2);
 stem(n,y(2:52),'linewidth',2);
+ylabel('y[n]');
+xlabel('n');
